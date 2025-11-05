@@ -12,7 +12,7 @@
 // Puedes establecer esta fecha a 14 días a partir de hoy (5 Nov 2025).
 const FALLBACK_PATCH_DATE = Date.UTC(2025, 11, 19, 10, 0, 0); // Ejemplo: 1 Dic 2025 a las 10:00 UTC
 // End of Current Split/Division (MANUAL - Update when Riot announces it!)
-const END_OF_SPLIT = Date.UTC(2025, 11, 20, 0, 0, 0); 
+const END_OF_SPLIT = Date.UTC(2025, 10, 20, 0, 0, 0); 
 
 // Start of the Split (Used for progress bar - MANUAL)
 const START_OF_SPLIT = Date.UTC(2025, 7, 20, 0, 0, 0); 
@@ -146,4 +146,5 @@ updateTimers();
 // Call the function every second (1000ms)
 
 const timerInterval = setInterval(updateTimers, 1000);
+
 
