@@ -2,7 +2,15 @@
 // 1. KEY DATE DEFINITIONS (Using Date.UTC for global precision)
 // NOTE: Months in JavaScript are 0 (January) to 11 (December)
 // ==========================================================
+// ==========================================================
+// 1. KEY DATE DEFINITIONS (Using Date.UTC for global precision)
+// ==========================================================
+// ... (Tus otras fechas) ...
 
+// FECHA DE RESERVA DEL PARCHE (MANUAL - Solo se usa si la API falla)
+// Nota: Un parche ocurre aproximadamente cada dos semanas (14 días).
+// Puedes establecer esta fecha a 14 días a partir de hoy (5 Nov 2025).
+const FALLBACK_PATCH_DATE = Date.UTC(2025, 11, 1, 10, 0, 0); // Ejemplo: 1 Dic 2025 a las 10:00 UTC
 // End of Current Split/Division (MANUAL - Update when Riot announces it!)
 const END_OF_SPLIT = Date.UTC(2025, 11, 20, 0, 0, 0); 
 
@@ -71,9 +79,14 @@ async function getNextPatchDate() {
             }
         }
         return null;
-    } catch (error) {
+} catch (error) {
         console.error("Error fetching patch API data:", error);
-        return null;
+        
+        // --- AQUÍ ESTÁ LA LÓGICA DE FALLBACK ---
+        // Usamos la fecha de reserva y actualizamos el título para avisar al usuario.
+        document.getElementById('reloaded-timer').parentElement.querySelector('h3').textContent = "Next Game Patch (Fallback Date)";
+        
+        return FALLBACK_PATCH_DATE;
     }
 }
 
@@ -131,4 +144,5 @@ async function updateTimers() {
 updateTimers(); 
 
 // Call the function every second (1000ms)
+
 const timerInterval = setInterval(updateTimers, 1000);
