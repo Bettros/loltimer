@@ -120,7 +120,7 @@ header h1 {
 .secondary-timers h2 {
     color: var(--color-acento);
     margin-bottom: 30px;
-    letter-spacing: 2px; 
+    letter-spacing: 5px; 
 }
 
 .timer-box {
@@ -137,7 +137,7 @@ header h1 {
     font-size: 2em; /* Reducido para mejor ajuste en cajas */
     margin-top: 0;
     color: var(--color-texto);
-    letter-spacing: normal; /* Removido espaciado extra */
+    letter-spacing: 5px; /* Removido espaciado extra */
     line-height: 1.2;
 }
 
@@ -228,4 +228,5 @@ header h1 {
         height: 50px;
         line-height: 50px;
     }
+
 }
