@@ -1,0 +1,231 @@
+/* PALETA DE COLORES LEAGUE OF LEGENDS (Azul y Dorado) */
+:root {
+    --color-fondo: #0A141E; /* Midnight Blue Dark */
+    --color-texto: #FFFFFF; /* White */
+    --color-acento: #039BE5; /* LoL Electric Blue */
+    --color-acento-principal: #FFC300; /* Gold for main timer */
+    --color-secundario: #1F2E40; /* Dark Blue for boxes */
+    --color-enlace-fondo: #00897B; /* Teal for buttons */
+}
+
+/* GENERAL STYLES AND FONT */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    /* Use League Gothic as primary font for the site body */
+    font-family: 'League Gothic', 'Oswald', sans-serif; 
+    margin: 0;
+    padding: 0; /* padding se manejará en el wrapper */
+    text-align: center;
+}
+
+/* --- ESTRUCTURA PRINCIPAL DE TRES COLUMNAS --- */
+.main-content-wrapper {
+    display: flex; /* Habilitar Flexbox */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Columna central (Contenido de la web) */
+.center-content {
+    width: 100%; 
+    max-width: 800px; /* Limita el ancho máximo del contenido principal */
+    padding: 20px; /* Añadimos el padding aquí */
+}
+
+/* Contenido dentro del header y timer */
+header h1 {
+    color: var(--color-acento);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    letter-spacing: 5px; 
+}
+
+/* MAIN TIMER STYLE */
+.main-timer {
+    margin-bottom: 50px;
+}
+
+.title-text {
+    font-size: 1.5em; /* AUMENTADO */
+    text-transform: uppercase;
+    color: #AAAAAA;
+    letter-spacing: 2px; /* Añadido para legibilidad */
+}
+
+.timer-display {
+    font-size: 6em; /* AUMENTADO */
+    font-weight: 700;
+    color: var(--color-acento-principal);
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+/* PROGRESS BAR */
+.progress-bar-container {
+    width: 80%;
+    max-width: 600px;
+    height: 15px;
+    background-color: var(--color-secundario);
+    border-radius: 5px;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--color-acento-principal);
+    transition: width 1s ease-in-out;
+}
+
+.progress-text {
+    font-size: 1em;
+    color: #AAAAAA;
+}
+
+/* SUBTLE MONETIZATION BUTTON */
+.monetization-link {
+    margin: 40px 0;
+}
+
+.affiliate-button {
+    /* USAR FUENTE OSWALD SOLO EN EL BOTÓN PARA MEJOR LEGIBILIDAD */
+    font-family: 'Oswald', sans-serif; 
+    
+    display: inline-block;
+    padding: 20px 40px; /* Aumentado el padding para el texto largo */
+    background-color: var(--color-enlace-fondo);
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: normal; /* Asegura que Oswald se lea bien */
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.affiliate-button:hover {
+    background-color: #00C853;
+}
+
+/* SECONDARY TIMERS SECTION */
+.secondary-timers {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-secundario);
+}
+
+.secondary-timers h2 {
+    color: var(--color-acento);
+    margin-bottom: 30px;
+    letter-spacing: 2px; 
+}
+
+.timer-box {
+    display: inline-block;
+    width: 45%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+}
+
+.timer-box h3 {
+    font-size: 2em; /* Reducido para mejor ajuste en cajas */
+    margin-top: 0;
+    color: var(--color-texto);
+    letter-spacing: normal; /* Removido espaciado extra */
+    line-height: 1.2;
+}
+
+.small-timer-display {
+    font-size: 3em; /* AUMENTADO */
+    font-weight: 700;
+    color: var(--color-acento);
+}
+
+/* CLEAN ADVERTISING SPACE (Horizontal Banner) */
+.ad-container {
+    margin: 60px 0 20px 0;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #222222;
+}
+
+.ad-title {
+    font-size: 0.9em;
+    color: #666666;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.ad-slot {
+    width: 90%;
+    max-width: 728px; 
+    height: 90px;
+    background-color: #000000;
+    margin: 0 auto;
+    border: 1px dashed #333333;
+    line-height: 90px;
+    color: #555555;
+}
+
+/* --- SIDE AD SLOTS (Lateral Banners) --- */
+.side-ad-left, .side-ad-right {
+    width: 0; /* Oculto por defecto en móvil */
+    visibility: hidden; 
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.side-ad-slot {
+    width: 300px; 
+    height: 600px; /* Tamaño estándar de rascacielos */
+    background-color: #000000;
+    border: 1px dashed #333333;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555555;
+    font-size: 0.8em;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Adaptación a ESCRITORIO (Activar Banners Laterales) */
+@media (min-width: 1400px) { 
+    
+    .center-content {
+        padding: 0;
+    }
+
+    .side-ad-left, .side-ad-right {
+        width: 300px; /* Habilitamos el ancho para los banners */
+        visibility: visible; /* Hacemos visibles los banners */
+        padding: 20px;
+        align-self: flex-start; /* Alinea los banners en la parte superior */
+    }
+}
+
+/* Adaptación a MÓVIL */
+@media (max-width: 768px) {
+    .center-content {
+        padding: 10px;
+    }
+    .timer-display {
+        font-size: 4em;
+    }
+    .timer-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .ad-slot {
+        max-width: 320px; 
+        height: 50px;
+        line-height: 50px;
+    }
+}
