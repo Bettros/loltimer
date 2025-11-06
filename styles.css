@@ -26,7 +26,82 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+/* --- ESTILOS PARA PÁGINAS ESTÁTICAS (About, Privacy, etc.) --- */
 
+/* Enlace del Header en páginas secundarias */
+.header-link {
+    text-decoration: none;
+    color: var(--color-acento);
+}
+
+.static-content {
+    background-color: var(--color-secundario);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: left; /* Más fácil de leer párrafos largos */
+    font-family: 'Oswald', sans-serif; /* Usamos Oswald para el texto */
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.static-content h2 {
+    color: var(--color-acento-principal);
+    font-family: 'League Gothic', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.static-content h3 {
+    color: var(--color-acento);
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.static-content p {
+    color: #DDDDDD;
+    margin-bottom: 20px;
+}
+
+.static-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #DDDDDD;
+}
+
+.static-content li {
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER (Pie de Página) --- */
+.site-footer {
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid var(--color-secundario);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9em;
+    color: #888888;
+}
+
+.site-footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover {
+    color: var(--color-acento);
+}
+
+.site-footer p {
+    margin-top: 10px;
+}
 /* Columna central (Contenido de la web) */
 .center-content {
     width: 100%; 
@@ -230,3 +305,4 @@ header h1 {
     }
 
 }
+
